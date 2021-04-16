@@ -37,7 +37,11 @@ body{
 }
 
 .navbar-menu ul {
-    padding-inline-start: 0px !important;
+    padding-inline-start: 0px !important;   
+}
+
+.navbar-menu ul > li {
+  margin-bottom: 15px;
 }
 
 @media (min-width : 400px) {
@@ -66,22 +70,23 @@ body{
 /** Banner */
 
 .banner{
-  background-image: linear-gradient(white, rgba(37, 233, 160, 0.5), white);
-  background-size: cover;
-  background-position-x: center;
-  background-position-y: top;
   flex-direction: column;
   height: 7vh;
   font-size: 30px;
   vertical-align: middle;
 }
 
+.banner h1{  
+  background-image: linear-gradient(white, rgba(37, 233, 160, 0.5), white);
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: top;
+}
+
 .banner-title{
-  margin-top: 45px;
-  margin-bottom: 45px;
-  padding-top: 20px;
-  font-style:normal;
-  font-family:"Segoe Print", "Times New Roman", Verdana;
+    margin-bottom: 50px;
+    font-style:normal;
+    font-family:"Segoe Print", "Times New Roman", Verdana;
 }
 
 @media only screen and (min-width : 668px) {
@@ -94,6 +99,14 @@ body{
     height: 7vh;
     font-size: 50px;
     vertical-align: middle;
+  }
+
+  .banner-title{
+    margin-top: 45px;
+    margin-bottom: 45px;
+    padding-top: 20px;
+    font-style:normal;
+    font-family:"Segoe Print", "Times New Roman", Verdana;
   }
 }
 
@@ -154,15 +167,30 @@ body{
 }
 
 .card{
-  background-color: rgb(88, 198, 25);
   padding: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 45px;
   border: none !important;
+
+  width: 250px;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  background-size:cover; 
+  background-position:center center; 
 }
 
 .cards a{
   background-color: white;
   margin-bottom: 15px;
+}
+
+.cards a:link{
+  text-decoration: none;
+  color: black;
+}
+
+.cards a:hover{
+  color: rgba(37, 233, 160, 0.5);
 }
 
 .cards{
@@ -171,7 +199,6 @@ body{
     grid-gap: 20px;
     margin-left: 20px;
     margin-right: 20px;
-
     position: relative;
     overflow: hidden;
     align-items: center;
@@ -185,10 +212,16 @@ body{
   position: absolute;
   bottom: 0;
   left: 0;
+  margin-top: 25px;
 }
 
 .cards img{
   width: 100%;
+  height: 100%
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
 }
 
 @media only screen and (min-width : 668px) {
